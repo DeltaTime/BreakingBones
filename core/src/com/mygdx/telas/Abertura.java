@@ -33,10 +33,10 @@ public class Abertura extends ApplicationAdapter {
         
         
         batch.begin();
-        batch.draw(imglogo, 230, 240);
+        batch.draw(imglogo,230, 240);
         batch.end();
         batch.begin();
-        batch.draw(imgtitulo, 150, 0);
+        batch.draw(imgtitulo, 150, 50);
         batch.end();
         batch.begin();
         batch.draw(imgdeltatime, 400, 400);
