@@ -20,7 +20,7 @@ public class TheBreakingBones extends Game {
     @Override
     public void create() {
          batch = new SpriteBatch();
-         player = new Sprite(new Texture(Gdx.files.internal("player1.jpg")));
+         player = new Sprite(new Texture(Gdx.files.internal("player1.png")));
         
        
         

@@ -16,7 +16,7 @@ import com.badlogic.gdx.graphics.g2d.SpriteBatch;
  *
  * @author Matheus
  */
-public class TelaAbertura implements Screen{
+public class TelaAbertura extends JanelaPadrao{
     private Sprite logo;
     private SpriteBatch batch;
     

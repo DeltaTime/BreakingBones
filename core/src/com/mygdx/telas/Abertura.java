@@ -6,7 +6,7 @@ import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import static javax.swing.Spring.width;
 
-public class Abertura extends ApplicationAdapter {
+public class Abertura extends JanelaPadrao {
 
     SpriteBatch batch;
     Texture imglogo;
@@ -15,9 +15,9 @@ public class Abertura extends ApplicationAdapter {
     @Override
     public void create() {
         batch = new SpriteBatch();
-        imglogo = new Texture(Gdx.files.internal("boneslogo.jpg"));
-        imgtitulo = new Texture(Gdx.files.internal("bonestitulo.jpg"));
-        imgdeltatime = new Texture(Gdx.files.internal("bonesdeltatime.jpg"));
+        imglogo = new Texture(Gdx.files.internal("imglogo.png"));
+        imgtitulo = new Texture(Gdx.files.internal("imgtitulo.png"));
+        imgdeltatime = new Texture(Gdx.files.internal("imgdeltatime.png"));
         
         }
 
@@ -30,16 +30,14 @@ public class Abertura extends ApplicationAdapter {
     public void render() {
         Gdx.gl.glClearColor(1, 1, 1, 1);
         Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT);
-        
-        
         batch.begin();
-        batch.draw(imglogo,230, 240);
+        batch.draw(imglogo,((Gdx.graphics.getWidth()/2) - (imglogo.getWidth()/2)), ((Gdx.graphics.getHeight()/2) - (imglogo.getHeight()/2)));
         batch.end();
         batch.begin();
-        batch.draw(imgtitulo, 150, 50);
+        batch.draw(imgtitulo, ((Gdx.graphics.getWidth()/2) - (imgtitulo.getWidth()/2)), ((Gdx.graphics.getHeight()/2) - ((imgtitulo.getHeight()/2) + 10 + (imglogo.getHeight()/2))));
         batch.end();
         batch.begin();
-        batch.draw(imgdeltatime, 400, 400);
+        batch.draw(imgdeltatime, ((Gdx.graphics.getWidth()) - (imgdeltatime.getWidth())), ((Gdx.graphics.getHeight()) - (imgdeltatime.getHeight())));
         batch.end();
         }
 
@@ -58,5 +56,20 @@ public class Abertura extends ApplicationAdapter {
         imgdeltatime.dispose();
         batch.dispose();
         }
+
+    @Override
+    public void show() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public void render(float delta) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public void hide() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
     
 }
