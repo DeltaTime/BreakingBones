@@ -2,14 +2,14 @@ package com.mygdx.game;
 
 import com.badlogic.gdx.Game;
 import com.badlogic.gdx.Gdx;
-import com.badlogic.gdx.Input;
 import com.badlogic.gdx.Input.Keys;
 import com.badlogic.gdx.graphics.GL30;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.Sprite;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
-
 import static javax.swing.Spring.width;
+
+
 
 public class TheBreakingBones extends Game {
 
@@ -40,16 +40,21 @@ public class TheBreakingBones extends Game {
        
        
        if(Gdx.input.isKeyPressed(Keys.UP)){
-            player.setY(player.getY() + 5);
+           if (player.getY() < (Gdx.graphics.getHeight() - player.getHeight()-1))
+                player.setY(player.getY() + 5);
+           
         }
         if(Gdx.input.isKeyPressed(Keys.DOWN)){
-            player.setY(player.getY() - 5);
+            if (player.getY() > -1)
+                player.setY(player.getY() - 5);
         }
         if(Gdx.input.isKeyPressed(Keys.LEFT)){
-            player.setX(player.getX() - 5);
+            if (player.getX() > -1)
+                player.setX(player.getX() - 5);
         }
         if(Gdx.input.isKeyPressed(Keys.RIGHT)){
-            player.setX(player.getX() + 5);
+            if (player.getX() < (Gdx.graphics.getWidth()- player.getWidth()-1))
+                player.setX(player.getX() + 5);
         }
         
         batch.begin();
