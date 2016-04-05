@@ -19,7 +19,7 @@ public class DesktopLauncher {
                 config.title = "The Breaking Bones";
                 config.fullscreen = false;
                 config.resizable = false;
-            LwjglApplication app = new LwjglApplication(new Abertura(), config);
+            LwjglApplication app = new LwjglApplication(new MyGdxGame(), config);
             
 	}
 }

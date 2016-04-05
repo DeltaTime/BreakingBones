@@ -7,14 +7,16 @@ import com.badlogic.gdx.Screen;
 import com.badlogic.gdx.graphics.GL20;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
-import com.mygdx.telas.TelaAbertura;
+import com.mygdx.telas.Abertura;
+
+
 
 public class MyGdxGame extends Game {
     private static final String titulo = "The Breaking Bones",versao="0.0.1";
     
     @Override
     public void create () {
-        setScreen(new TelaAbertura()); 
+        setScreen(new Abertura()); 
     }
 
     @Override

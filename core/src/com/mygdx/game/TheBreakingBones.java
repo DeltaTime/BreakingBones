@@ -9,7 +9,6 @@ import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.Sprite;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 
-import com.sun.media.jfxmedia.events.PlayerStateEvent;
 import static javax.swing.Spring.width;
 
 public class TheBreakingBones extends Game {
