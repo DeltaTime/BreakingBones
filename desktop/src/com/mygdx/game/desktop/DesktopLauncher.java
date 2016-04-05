@@ -2,10 +2,9 @@ package com.mygdx.game.desktop;
 
 import com.badlogic.gdx.backends.lwjgl.LwjglApplication;
 import com.badlogic.gdx.backends.lwjgl.LwjglApplicationConfiguration;
-import com.badlogic.gdx.graphics.Color;
-import com.mygdx.telas.Abertura;
-import com.mygdx.game.MyGdxGame;
 import com.mygdx.game.TheBreakingBones;
+import com.mygdx.telas.Abertura;
+
 
 
 public class DesktopLauncher {
@@ -19,7 +18,8 @@ public class DesktopLauncher {
                 config.title = "The Breaking Bones";
                 config.fullscreen = false;
                 config.resizable = false;
-            LwjglApplication app = new LwjglApplication(new Abertura(), config);
+            LwjglApplication app = new LwjglApplication(new TheBreakingBones(), config);
+            
             
 	}
 }
