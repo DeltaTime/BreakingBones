@@ -18,23 +18,22 @@ import com.badlogic.gdx.graphics.g2d.SpriteBatch;
  * @author Matheus
  */
 public class TelaAbertura implements Screen, InputProcessor{
-    private Sprite boneslogo;
-    private Sprite bonestitulo;
-    private Sprite deltatimelogo;    
     private SpriteBatch batch;
+    private Sprite imglogo;
+    private Sprite imgtitulo;
+    private Sprite imgdeltatime;
     
     
     
     @Override
     public void show() {
         batch = new SpriteBatch();
-        
-        Texture boneslogotexture = new Texture("boneslogo.png");
-        boneslogo = new Sprite(boneslogotexture);
-        Texture bonestitulotexture = new Texture("bonestitulo.png");
-        bonestitulo = new Sprite(bonestitulotexture);
-        Texture deltatimelogotexture = new Texture("deltatimelogo.png");
-        deltatimelogo = new Sprite(deltatimelogotexture);
+        Texture textureimglogo = new Texture("imglogo.png");
+        Texture textureimgtitulo = new Texture("imgtitulo.png");
+        Texture textureimgdeltatime = new Texture("imgdeltatime.png");
+        imglogo = new Sprite(textureimglogo);
+        imgtitulo = new Sprite(textureimgtitulo);
+        imgdeltatime = new Sprite(textureimgdeltatime);
         
         //logo.setSize(Gdx.graphics.getWidth()/2,Gdx.graphics.getHeight()/2);
         }
@@ -45,14 +44,15 @@ public class TelaAbertura implements Screen, InputProcessor{
         Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT);
         
         batch.begin();
-        batch.draw(boneslogo, 400, 240);
+        batch.draw(imglogo,((Gdx.graphics.getWidth()/2) - (imglogo.getWidth()/2)), ((Gdx.graphics.getHeight()/2) - (imglogo.getHeight()/2)));
         batch.end();
         batch.begin();
-        batch.draw(bonestitulo, 280, 0);
+        batch.draw(imgtitulo, ((Gdx.graphics.getWidth()/2) - (imgtitulo.getWidth()/2)), ((Gdx.graphics.getHeight()/2) - ((imgtitulo.getHeight()/2) + 10 + (imglogo.getHeight()/2))));
         batch.end();
         batch.begin();
-        batch.draw(deltatimelogo, 820, 680);
+        batch.draw(imgdeltatime, ((Gdx.graphics.getWidth()) - (imgdeltatime.getWidth())), ((Gdx.graphics.getHeight()) - (imgdeltatime.getHeight())));
         batch.end();
+
         
         }
 
@@ -75,9 +75,9 @@ public class TelaAbertura implements Screen, InputProcessor{
     @Override
     public void dispose() {
         batch.dispose();
-        boneslogo.getTexture().dispose();
-        deltatimelogo.getTexture().dispose();
-        bonestitulo.getTexture().dispose();
+        imglogo.getTexture().dispose();
+        imgdeltatime.getTexture().dispose();
+        imgtitulo.getTexture().dispose();
         }
 
     @Override
