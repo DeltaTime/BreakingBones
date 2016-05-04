@@ -1,5 +1,6 @@
 package com.mygdx.game.desktop;
 
+import Teste.Main.Game;
 import com.badlogic.gdx.ApplicationListener;
 import com.badlogic.gdx.backends.lwjgl.LwjglApplication;
 import com.badlogic.gdx.backends.lwjgl.LwjglApplicationConfiguration;
@@ -9,17 +10,17 @@ import com.mygdx.game.TheBreakingBones;
 import com.mygdx.telas.Play;
 
 
-public class DesktopLauncher {
+public class DesktopTheBreakingBones {
         
         
 	public static void main (String[] arg) { 
                 
                 LwjglApplicationConfiguration config = new LwjglApplicationConfiguration();
-		config.width = 1024;
-                config.height = 780;
-                config.title = "The Breaking Bones";
+		config.width = Game.width * Game.scale;
+                config.height = Game.height *  Game.scale;
+                config.title = Game.titulo;
                 config.fullscreen = false;
                 config.resizable = false;
-                new LwjglApplication( new Principal(), config);
+                new LwjglApplication( new Game(), config);
 	}
 }

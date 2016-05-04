@@ -16,6 +16,7 @@ import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.maps.tiled.TiledMap;
 import com.badlogic.gdx.maps.tiled.TmxMapLoader;
 import com.badlogic.gdx.maps.tiled.renderers.OrthogonalTiledMapRenderer;
+import com.badlogic.gdx.math.Vector2;
 
 /**
  *
@@ -30,12 +31,16 @@ public class Play implements Screen{
     
     
     
+    
+    
     @Override
     public void show() {
+        
+        
         TmxMapLoader loader = new TmxMapLoader();
         mapa1 = loader.load("map.tmx");
         player = new Player(new Sprite(new Texture("player1.png")));
-        camera = new OrthographicCamera();
+        
         renderer = new OrthogonalTiledMapRenderer(mapa1);
         Gdx.input.setInputProcessor(player);
     
@@ -60,8 +65,7 @@ public class Play implements Screen{
 
     @Override
     public void resize(int width, int height) {
-        camera.viewportWidth = width;
-        camera.viewportHeight = height;
+        
     }
 
     @Override

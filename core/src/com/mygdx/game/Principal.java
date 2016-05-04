@@ -20,7 +20,7 @@ public class Principal extends Game {
     @Override
     public void create() {
         if(status == 0)
-            this.setScreen(new TelaAbertura());
+            this.setScreen(new Play());
         //this.setScreen(new Play());
     }
     
